@@ -15,8 +15,8 @@ fi
 
 {
     echo $(tput setaf 3)'Cleaning up'$(tput setaf 7);
-    cd `pwd`/$2;
-    rm -rf .git;
+    rm -rf `pwd`/$2/.git;
+    chmod -R 777 `pwd`/$2;
 } & wait
 
 echo $(tput setaf 3)'Creating virtual host'$(tput setaf 7);
